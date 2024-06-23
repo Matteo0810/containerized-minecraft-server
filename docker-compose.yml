@@ -1,0 +1,11 @@
+version: "3"
+services:
+  minecraft-serveur:
+    environment:
+      MIN_MEMORY: 1096M
+      MAX_MEMORY: 1096M
+      SERVER_FILENAME: server.jar
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
