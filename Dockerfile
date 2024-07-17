@@ -19,8 +19,8 @@ ENV MAX_MEMORY 1096M
 
 COPY --from=tmp ${SERVER_FILENAME} .
 
-COPY ./run_server.sh .
+COPY ./entrypoint.sh .
 
-RUN chmod +x ./run_server.sh
+RUN chmod +x ./entrypoint.sh
 
-ENTRYPOINT ["./run_server.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
